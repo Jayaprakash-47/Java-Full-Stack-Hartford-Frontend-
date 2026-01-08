@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background: #f5f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 70px; /* space for footer */
+}
+
+/* ---------- HEADER ---------- */
+header{
+    background: #2e7d32;
+    color: #fff;
+    padding: 18px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* ---------- NAV ---------- */
+nav{
+    background: #1b1b1b;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 0;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 10px;
+}
+
+nav ul li a:hover{
+    background: rgba(255,255,255,0.15);
+    border-radius: 4px;
+}
+
+/* ---------- HOME (HERO) ---------- */
+.home{
+    position: relative;
+}
+
+.home video{
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    display: block;
+}
+
+.home h1{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 42px;
+    background: rgba(0,0,0,0.45);
+    text-align: center;
+}
+
+/* ---------- ABOUT ---------- */
+.about{
+    background: #fff;
+    padding: 60px 20px;
+}
+
+.about .content{
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about h2{
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #2e7d32;
+}
+
+/* Shared section title used above flex containers */
+.section-title{
+    text-align: center;
+    color: #2e7d32;
+    font-size: 28px;
+    margin: 30px 0 12px;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery{
+    display: flex;               /* IMPORTANT */
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.gallery .image{
+    flex: 1 1 calc(25% - 20px);
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+.gallery .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.gallery .image:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+.gallery .image:hover img{
+    transform: scale(1.1);
+}
+
+/* ---------- AMENITIES ---------- */
+.amenities{
+    background: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+.amenity{
+    width: 180px;
+    height: 160px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-align: center;
+}
+.amenity:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    background: #ffffff;
+}
+/* ---------- CONTACT ---------- */
+.contact{
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2{
+    margin-bottom: 10px;
+    color: #2e7d32;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background: #1b1b1b;
+    color: #ccc;
+    text-align: center;
+    padding: 16px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px){
+    .gallery .image{
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px){
+    .gallery .image{
+        flex: 1 1 100%;
+    }
+}
+
+
+@media (max-width: 500px){
+    nav ul{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .gallery .image{
+        flex: 1 1 100%;
+    }
+
+    .amenity{
+        width: 100%;
+        height: auto;
+            padding: 30px;
+    }
+
+    .home h1{
+        font-size: 28px;
+        padding: 0 10px;
+    }
+}
