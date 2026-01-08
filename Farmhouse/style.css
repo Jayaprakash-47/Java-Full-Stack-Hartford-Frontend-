@@ -398,6 +398,32 @@ header nav a.active::after {
   background: linear-gradient(135deg, #ffb74d 0%, #ff9800 100%);
 }
 
+/* ================= RULES PAGE (scoped) ================= */
+.rules-page{--bg:#f6f7fb;--card:#ffffff;--muted:#6b7280;--accent:#2b8a78}
+.rules-page{font-family:Inter, system-ui, Segoe UI, Roboto, "Helvetica Neue", Arial}
+.rules-page header{background:linear-gradient(90deg,rgba(43,138,120,0.08),transparent);padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.rules-page header h2{margin:0;font-size:1.1rem;color:var(--accent)}
+.rules-page nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-weight:600}
+.rules-page .container{max-width:980px;margin:18px auto;padding:0 20px}
+.rules-page .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.rules-page h1{margin:0 0 8px 0;font-size:1.4rem}
+.rules-page .lead{margin:0 0 14px 0;color:var(--muted)}
+.rules-page .hero{display:grid;grid-template-columns:1fr;align-items:center;gap:18px;padding:28px 0}
+.rules-page .hero__media{height:200px;border-radius:12px;overflow:hidden}
+.rules-page .hero__media img{width:100%;height:100%;object-fit:cover;display:block}
+.rules-page .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rules-page .rules{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px;list-style:none;padding:0}
+.rules-page .rule{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:8px;border:1px solid #f0f1f6}
+.rules-page .rule__icon{font-size:1.35rem;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#f3faf8;color:var(--accent)}
+.rules-page .rule__content strong{display:block;margin-bottom:4px}
+.rules-page .muted{color:var(--muted);font-size:0.95rem}
+.rules-page .foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.rules-page .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+.rules-page .ghost{background:transparent;border:1px solid #e6eef0;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none}
+.rules-page .foot .btn{margin-left:8px}
+@media(min-width:800px){.rules-page .hero{grid-template-columns:1fr 420px}.rules-page .two-col{grid-template-columns:1fr 1fr}}
+
+
 .card.night-card {
   background: linear-gradient(135deg, #424242 0%, #212121 100%);
 }
