@@ -1,4 +1,4 @@
-﻿//function declaration without parameters
+//function declaration without parameters
 function sayHello(){
     console.log("Hello, World!");
 }
@@ -45,5 +45,6 @@ const welcome = () => {
     console.log("Welcome!");
 };
 welcome(); // Outputs: Welcome!
+
 
 

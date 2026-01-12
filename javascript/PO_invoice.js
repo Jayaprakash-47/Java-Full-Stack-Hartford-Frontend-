@@ -2,7 +2,8 @@
 function generateNumber() {
   let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let code = "";
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i++) 
+  {
     code += letters[Math.floor(Math.random() * 26)];
   }
   let digits = Math.floor(100 + Math.random() * 900);
