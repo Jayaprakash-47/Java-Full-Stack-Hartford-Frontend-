@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Escape Earthy Farmhouse</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/h.avif" type="image/avif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h2><i class="fas fa-leaf"></i> ESCAPE EARTHY</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="booking.html" class="active">Booking</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero-video">
+  <div class="hero-bg farm-bg"></div>
+  <div class="hero-content">
+    <h1>Book Your Perfect Stay</h1>
+    <p>Reserve your dates and create unforgettable memories</p>
+  </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="booking-section">
+    <h2>Reserve Your Stay</h2>
+    <p class="booking-subtitle">Fill in the details below to check availability and complete your booking</p>
+
+    <form class="booking-form" action="https://wa.me/919876543210" method="get" target="_blank">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required>
+            </div>
+            <div class="form-group">
+                <label for="guests"><i class="fas fa-users"></i> Number of Guests</label>
+                <input type="number" id="guests" name="guests" min="1" max="50" placeholder="1" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="checkin"><i class="fas fa-sign-in-alt"></i> Check-in Date</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+            <div class="form-group">
+                <label for="checkout"><i class="fas fa-sign-out-alt"></i> Check-out Date</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="event"><i class="fas fa-calendar-alt"></i> Event Type (Optional)</label>
+                <select id="event" name="event">
+                    <option value="">Select Event Type</option>
+                    <option value="Family Getaway">Family Getaway</option>
+                    <option value="Birthday Party">Birthday Party</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Corporate Retreat">Corporate Retreat</option>
+                    <option value="Anniversary Celebration">Anniversary Celebration</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="room"><i class="fas fa-bed"></i> Room Type</label>
+                <select id="room" name="room">
+                    <option value="">Select Room Type</option>
+                    <option value="Single Room">Single Room</option>
+                    <option value="Double Room">Double Room</option>
+                    <option value="Family Suite">Family Suite</option>
+                    <option value="Entire Farmhouse">Entire Farmhouse</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="message"><i class="fas fa-comment-alt"></i> Additional Requests (Optional)</label>
+            <textarea id="message" name="message" placeholder="Tell us if you have any special requirements or preferences..."></textarea>
+        </div>
+
+        <div class="booking-terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms" class="terms-label">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Cancellation Policy</a></label>
+        </div>
+
+        <button type="submit" class="booking-btn"><i class="fas fa-check-circle"></i> Complete Booking</button>
+    </form>
+
+    <!-- BOOKING INFO -->
+    <div class="booking-info">
+        <h3>Booking Information</h3>
+        <div class="info-cards">
+            <div class="info-card">
+                <i class="fas fa-credit-card"></i>
+                <h4>Flexible Payment</h4>
+                <p>Pay 50% at booking, 50% before arrival</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-undo"></i>
+                <h4>Free Cancellation</h4>
+                <p>Cancel up to 7 days before for full refund</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-headset"></i>
+                <h4>24/7 Support</h4>
+                <p>Always here to help with your queries</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-star"></i>
+                <h4>Best Price</h4>
+                <p>Guaranteed lowest rates on the web</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+    <h2>Questions? We're Here to Help!</h2>
+    <p>Contact us on WhatsApp for instant support</p>
+    <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>📍 Hyderabad, Telangana, India</p>
+            <p>📞 +91 9876543210</p>
+            <p>✉️ info@greenvalleyfarmhouse.com</p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Green Valley Farmhouse. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

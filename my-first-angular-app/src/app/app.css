@@ -1,0 +1,52 @@
+.brand-name {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #605dec;
+}
+
+.brand-logo { height: 40px; }
+
+.content { padding: 30px; }
+
+input[type="text"] {
+  border: solid 1px #e8e7fa;
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #f8f8f8;
+}
+
+button.primary {
+  padding: 12px 25px;
+  background-color: #605dec;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button.primary:hover { opacity: 0.8; }
+
+/* RESPONSIVE GRID */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0 30px 50px 30px;
+}
+
+@media (max-width: 500px) {
+  .results { grid-template-columns: 1fr; padding: 15px; }
+  input[type="text"] { width: 70%; }
+}

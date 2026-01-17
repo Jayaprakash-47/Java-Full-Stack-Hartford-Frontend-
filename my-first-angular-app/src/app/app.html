@@ -1,0 +1,23 @@
+<main>
+  <header class="brand-name">
+    <img class="brand-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCsnjMQTfR9wQj7RMtFKBvPawsQbRro9ekiw&s" alt="logo" aria-hidden="true">
+    <span class="logo-text">Homes</span>
+  </header>
+
+  <section class="content">
+    <form (submit)="$event.preventDefault()">
+      <input type="text" placeholder="Filter by city (e.g. Chicago)" #filter>
+      <button class="primary" type="button" (click)="updateFilter(filter.value)">Search</button>
+    </form>
+  </section>
+
+  <section class="results">
+    @for (location of filteredLocationList(); track location.id) {
+      <app-housing-location [housingLocation]="location"></app-housing-location>
+    } @empty {
+      <p class="no-results">No houses found in that city.</p>
+    }
+  </section>
+</main>
+
+<router-outlet />
