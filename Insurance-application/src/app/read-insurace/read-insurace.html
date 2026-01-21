@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3>Total Policies</h3>
+            <p class="stat-value">{{ totalPolicies }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Portfolio Value</h3>
+            <p class="stat-value">{{ totalValue | currency }}</p>
+        </div>
+    </div>
+
+    <div class="header-actions">
+        <h2>Insurance Policies</h2>
+        <a routerLink="/create" class="btn-add">Add New Policy</a>
+    </div>
+
+    @if (policies.length === 0) {
+    <p class="no-data">No policies found. <a routerLink="/create">Create one?</a></p>
+    } @else {
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Policy #</th>
+                    <th>Holder</th>
+                    <th>Type</th>
+                    <th>Premium</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (policy of policies; track policy.id) {
+                <tr>
+                    <td>{{ policy.policyNumber }}</td>
+                    <td>{{ policy.policyHolderName }}</td>
+                    <td>
+                        <span class="badge {{ policy.type.toLowerCase() }}">{{ policy.type }}</span>
+                    </td>
+                    <td>{{ policy.premiumAmount | currency }}</td>
+                    <td>{{ policy.startDate | date }}</td>
+                    <td>{{ policy.endDate | date }}</td>
+                    <td>
+                        <a [routerLink]="['/update', policy.id]" class="btn-edit">Edit</a>
+                        <button class="btn-delete" (click)="deletePolicy(policy.id)">Delete</button>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    }
+</div>

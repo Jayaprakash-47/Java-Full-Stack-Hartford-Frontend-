@@ -1,0 +1,84 @@
+/* Global Design System */
+:root {
+    /* Dynamic Color Palette - Deep Blue/Purple/Pink Gradient Theme */
+    --primary-color: #6366f1;
+    /* Indigo */
+    --primary-dark: #4338ca;
+    --secondary-color: #ec4899;
+    /* Pink */
+    --accent-color: #8b5cf6;
+    /* Violet */
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+
+    /* Neutral Colors */
+    --text-main: #1e293b;
+    --text-secondary: #64748b;
+    --text-light: #94a3b8;
+    --background-dark: #0f172a;
+    --background-light: #f1f5f9;
+    --white: #ffffff;
+
+    /* Glassmorphism Variables */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+
+    /* Spacing & Layout */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
+
+    /* Typography */
+    --font-family: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, #eef2ff 0%, #fae8ff 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--background-dark);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+button {
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-light);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}

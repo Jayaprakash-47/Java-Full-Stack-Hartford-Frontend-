@@ -1,0 +1,61 @@
+<div class="form-container">
+    <div class="glass-card">
+        <div class="card-header">
+            <h2>Create New Policy</h2>
+            <p>Enter the details below to register a new insurance policy.</p>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="policyForm" class="policy-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Policy Holder Name</label>
+                    <input formControlName="policyHolderName" required placeholder="Ex: John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input formControlName="dateOfBirth" type="date" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Email Address</label>
+                    <input formControlName="email" type="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Type</label>
+                    <div class="select-wrapper">
+                        <select formControlName="type">
+                            <option value="Health">Health</option>
+                            <option value="Life">Life</option>
+                            <option value="Auto">Auto</option>
+                            <option value="Home">Home</option>
+                            <option value="Car">Car</option>
+                            <option value="Business">Business</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Premium Amount</label>
+                    <input formControlName="premiumAmount" type="number" required placeholder="$0.00">
+                </div>
+
+                <div class="form-group">
+                    <label>Start Date</label>
+                    <input formControlName="startDate" type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>End Date</label>
+                    <input formControlName="endDate" type="date" required>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn-reset" (click)="onReset()">Reset</button>
+                <button type="submit" [disabled]="policyForm.invalid" class="btn-submit">Create Policy</button>
+            </div>
+        </form>
+    </div>
+</div>
